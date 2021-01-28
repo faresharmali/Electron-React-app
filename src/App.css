@@ -40,28 +40,141 @@ body {
 .sidebar{
 	width: 100%;
 	height: 100vh;
-	background-color: #232E42;
+	background: linear-gradient(to bottom,#1e5a6d,#1c2a42);
 	text-align: center;
 }
 .sidebar_heading{
 	height: 10%;
-	background-color: #5468FF;
+	background-color: #232E42;
 	color: #fff;
-	margin-bottom: 15px;
+	margin-bottom: 40px;
+	
 }
 .main{
 	width: 100%;
 	height: 100vh;
 	background-color: #DDE0E6;
 }
+.main nav{
+	height: 10%;
+background: linear-gradient(to right,#232E42,#4f6692);}
 .sideBar_item{
 	width: 100%;
-	height: 50px;
-	color: #DDE0E6;
+	height: 70px;
+	color: #fff;
 	text-align: left;
 	padding-left: 19px;
-	font-size: 18px;
+	font-size: 20px;
 	cursor: pointer;
 	display: grid;
 	grid-template-columns: 1fr .2fr;
+}
+.icon {
+	transition: .3s ease;
+}
+.rotate{
+	transform: rotate(90deg);
+}
+.ChangeColor{
+	color: #fff !important;
+}
+.logo{
+	width: 100%;
+}
+
+
+
+
+
+/*clients page Style*/
+.clients{
+	padding: 30px 0;
+}
+.clients_table{
+	width: 90%;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 40px;
+	border: 1px solid rgb(190, 190, 190);
+}
+#customers {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#customers td, #customers th {
+   border-bottom: 1px solid #ddd;
+	padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #1c5161;
+	color: white;
+}
+.add_user_form{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding: 40px;
+	
+	border: 1px solid rgb(190, 190, 190);
+
+}
+.form_container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px 20px ;
+	margin: 20px 0;
+
+}
+.form_container input{
+	border: none;
+	border-bottom: 2px solid #1c5161;
+	height: 40px;
+	font-size: 19px;
+	padding: 20px 0;
+}
+.form_container input:focus{
+	outline: none;
+	border-bottom: 2px solid #F8991C;
+
+}
+.invalid{
+	border-bottom: 2px solid red !important;
+}
+.clients h1{
+	color: #232E42;
+	font-size: 25px;
+	margin-bottom: 15px;
+}
+.add_btn{
+	width: 100px;
+	height: 40px;
+	background: #232E42;
+	color: #fff;
+	font-weight: 600;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 2px solid #232E42;
+	transition: .3s ease;
+	
+}
+.add_btn:hover{
+	background: #fff;
+	color: #232E42;
+	
+
+}
+.buttons_container{
+	width: 100%;
+	justify-content: flex-end;
 }
