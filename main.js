@@ -1,6 +1,6 @@
 const path = require('path')
 const url = require('url')
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow,ipcMain } = require('electron')
 
 let mainWindow
 
@@ -78,5 +78,8 @@ app.on('activate', () => {
 	}
 })
 
+ipcMain.on("login",(e,options)=>{
+	console.log(options)
+})
 // Stop error
 app.allowRendererProcessReuse = true
