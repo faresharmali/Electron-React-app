@@ -15,6 +15,7 @@ if (
 
 function createMainWindow() {
 	mainWindow = new BrowserWindow({
+		title:"ABC Gestion Commercial",
 		width: 1100,
 		height: 800,
 		show: false,

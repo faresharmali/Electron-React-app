@@ -29,7 +29,7 @@ module.exports = {
 	},
 	target: 'electron-renderer',
 	plugins: [
-		new HtmlWebpackPlugin({ title: 'React Electron App' }),
+		new HtmlWebpackPlugin({ title: 'ABC Gestion Commercial' }),
 		new MiniCssExtractPlugin({
 			// Options similar to the same options in webpackOptions.output
 			// both options are optional

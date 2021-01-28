@@ -1,6 +1,6 @@
 {
-  "name": "simple-electron-react",
-  "productName": "React Electron App",
+  "name": "ABC Gestion Commercial",
+  "productName": "ABCGestionCommercial",
   "version": "1.0.0",
   "description": "Simple boilerplate for building Electron apps with React",
   "license": "MIT",

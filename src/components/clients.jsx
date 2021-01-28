@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faList ,faUserPlus} from "@fortawesome/free-solid-svg-icons";
+import {faList ,faUserPlus ,faCheckDouble,faTimesCircle} from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 const Clients = (props) => {
   let [nom, setName] = useState("");
@@ -14,7 +14,6 @@ const Clients = (props) => {
           
           if(input.value.trim()==''){
             input.classList.add("invalid")
-           
             valid=false;
           }
       })
@@ -24,10 +23,27 @@ const Clients = (props) => {
         setPname("");
         setNum("");
         setAdr("");
+        showSucces();
+      }else{
+        showError();
       }
    
    
   };
+  let showSucces=()=>{
+      document.querySelector('.succes').style.display="inline-block";
+      setTimeout(() => {
+        document.querySelector('.succes').style.display="none";
+      }, 1500);
+
+  }
+  let showError=()=>{
+      document.querySelector('.error').style.display="inline-block";
+      setTimeout(() => {
+        document.querySelector('.error').style.display="none";
+      }, 1500);
+
+  }
   let handleNewUser = (e) => {
     e.target.classList.remove("invalid")
     switch (e.target.name) {
@@ -57,12 +73,19 @@ const Clients = (props) => {
             <input onChange={handleNewUser} type="text" placeholder="Adresse"name="Adress"  value={Adress}/>
             </div>
             <div className="buttons_container flex_center">
+                <div className="flex_center alert succes">
+                    <h4><FontAwesomeIcon icon={faCheckDouble} /> Client Ajouté Avec Succes !</h4>
+                </div>
+                <div className="flex_center alert error">
+                    <h4><FontAwesomeIcon icon={faTimesCircle} /> Verifier Vos Informations !</h4>
+                </div>
             <div className="add_btn flex_center" onClick={addUser}>ajouter</div>
             </div>
       </div>
 
       <div className="clients_table">
         <h1><FontAwesomeIcon icon={faList} /> Liste Des Clients</h1>
+       
         <div>
           <table id="customers">
             <thead>
